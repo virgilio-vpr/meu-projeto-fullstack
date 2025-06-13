@@ -1,1 +1,17 @@
-
+{
+  "name": "Fullstack App",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "backend",
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "prisma.prisma",
+    "dbaeumer.vscode-eslint",
+    "ms-azuretools.vscode-docker"
+  ],
+  "forwardPorts": [3000, 5173, 5432],
+  "postCreateCommand": "npm install --prefix backend && npm install --prefix frontend",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  }
+}
